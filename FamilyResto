@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class FamilyResto {
+    public void ProfilFamilyResto (){
+        System.out.println("=====                   Family Resto                    ======");
+        System.out.println("=====     Alamat : Jln. Setia Jaya , no. 10, Bali       ======");
+        System.out.println("=====                                                   ======");
+        System.out.println("         Daftar Menu : ");
+        System.out.println("1. Opor Ayam      Rp. 15.000");
+        System.out.println("2. Nasi Gurih     Rp. 13.000");
+        System.out.println("3. Nasi Goreng    Rp. 25.000");
+        System.out.println("4. Nasi Uduk      Rp. 12.000");
+        System.out.println("5. Jus            Rp.  8.000");
+        System.out.println("6. Es Teh         Rp.  5.000");
+
+        System.out.println("=====         Terima Kasih, Selamat Menikmati           ======");
+
+        Scanner input = new Scanner(System.in);
+
+
+        System.out.println("Masukkan Pilihan Anda : ");
+        int menu = input.nextInt();
+        System.out.println("Jumlah pesanan : ");
+        int jumlah  = input.nextInt();
+
+        int harga = 0;
+        switch(menu){
+            case 1:
+                harga = 15000;
+                break;
+            case 2:
+                harga = 13000;
+                break;
+            case 3:
+                harga = 25000;
+                break;
+            case 4:
+                harga = 12000;
+                break;
+            case 5:
+                harga = 8000;
+                break;
+            case 6:
+                harga = 5000;
+                break;
+            default:
+                System.out.println("Menu tidak tersedia");
+                break;
+        }
+
+        int total = harga * jumlah;
+        System.out.println("Total harga : Rp. " + total);
+
+    }
+}
