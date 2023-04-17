@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TambahRestoran {
+     public void Tambahkan () {
+        String nama;
+        String alamat;
+        String menu;
+        int harga;
+        ArrayList<String> daftarMenu = new ArrayList<>();
+        ArrayList<Integer> daftarHarga = new ArrayList<>();
+
+        Scanner scanner = new Scanner(System.in);
+
+
+    }
+
+}
+
+
+
+
