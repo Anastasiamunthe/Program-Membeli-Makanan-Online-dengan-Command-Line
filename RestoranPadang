@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class RestoranPadang {
+    public void ProfilRestoranPadang (){
+        System.out.println("=====                 Restoran Padang                   ======");
+        System.out.println("=====     Alamat : Jln. Lancar Jaya, no. 28, Bali       ======");
+        System.out.println("=====                                                   ======");
+        System.out.println("         Daftar Menu : ");
+        System.out.println("1. Ayam Goreng    Rp. 15.000");
+        System.out.println("2. Ayam Bakar     Rp. 15.000");
+        System.out.println("3. Rendang        Rp. 20.000");
+        System.out.println("4. Ayam Goreng    Rp. 15.000");
+        System.out.println("5. Teh Tawar      Rp.  3.000");
+        System.out.println("6. Es Teh Manis   Rp.  5.000");
+
+        System.out.println("=====            Anda Kenyang, Kami Senang              ======");
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Masukkan Pilihan Anda : ");
+        int menu = input.nextInt();
+        System.out.println("Jumlah pesanan : ");
+        int jumlah  = input.nextInt();
+
+        int harga = 0;
+        switch(menu){
+            case 1:
+                harga = 15000;
+                break;
+            case 2:
+                harga = 15000;
+                break;
+            case 3:
+                harga = 20000;
+                break;
+            case 4:
+                harga = 15000;
+                break;
+            case 5:
+                harga = 3000;
+                break;
+            case 6:
+                harga = 5000;
+                break;
+            default:
+                System.out.println("Menu tidak tersedia");
+                break;
+        }
+
+        int total = harga * jumlah;
+        System.out.println("Total harga : Rp. " + total);
+    }
+
+}
