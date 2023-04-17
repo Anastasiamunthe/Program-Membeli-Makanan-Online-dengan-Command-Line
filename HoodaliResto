@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class HoodaliResto {
+    public void ProfilHoodaliResto (){
+        System.out.println("=====                   Hoodali Resto                   ======");
+        System.out.println("=====         Alamat : Jln. Aspal, no. 10, Bali         ======");
+        System.out.println("=====                                                   ======");
+        System.out.println("         Daftar Menu : ");
+        System.out.println("1. Ayam Geprek    Rp. 15.000");
+        System.out.println("2. Nasi Goreng    Rp. 12.000");
+        System.out.println("3. Soto Ayam      Rp. 15.000");
+        System.out.println("4. Ayam Goreng    Rp. 15.000");
+        System.out.println("5. Ikan Bakar     Rp. 12.000");
+        System.out.println("6. Bebek Goreng   Rp. 15.000");
+
+        System.out.println("=====         Anda Lapar ?? Ingat Hoodali Resto         ======");
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Masukkan Pilihan Anda : ");
+        int menu = input.nextInt();
+        System.out.println("Jumlah pesanan : ");
+        int jumlah  = input.nextInt();
+
+        int harga = 0;
+        switch(menu){
+            case 1:
+                harga = 15000;
+                break;
+            case 2:
+                harga = 12000;
+                break;
+            case 3:
+                harga = 15000;
+                break;
+            case 4:
+                harga = 15000;
+                break;
+            case 5:
+                harga = 12000;
+                break;
+            case 6:
+                harga = 15000;
+                break;
+            default:
+                System.out.println("Menu tidak tersedia");
+                break;
+        }
+
+        int total = harga * jumlah;
+        System.out.println("Total harga : Rp. " + total);
+    }
+}
