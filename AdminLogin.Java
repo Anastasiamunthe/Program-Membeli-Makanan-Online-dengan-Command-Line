@@ -1,11 +1,20 @@
-import javax.swing.*;
+import java.util.Scanner;
 
 public class AdminLogin {
-    private JTextField adminLoginTextField;
-    private JFormattedTextField usernameFormattedTextField;
-    private JPasswordField passwordPasswordField;
+    public void admin() {
+        System.out.println("Anda Memilih Login Sebagai Admin");
+        Scanner scanner = new Scanner(System.in);
+        String username, password;
+        System.out.println("Masukkan Username :");
+        username =scanner.nextLine();
+        System.out.println("Masukkan Password :");
+        password =scanner.nextLine();
 
-    public boolean validateCredentials(String username, String password) {
-        return username.equals("admin") && password.equals("admin123");
+        if (username.equals("admin") && password.equals("admin123")) {
+            Admin admin = new Admin();
+            Admin.adminMenu();
+        }else {
+            System.out.println("Username Atau Password Salah");
+        }
     }
 }
