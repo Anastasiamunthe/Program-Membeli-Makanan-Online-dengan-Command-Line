@@ -1,43 +1,31 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("=== Selamat datang di layanan pesan online ===");
-        System.out.println("===            MARI MAKAN        ===");
+    public static void main (String[] args) {
+        System.out.println("===== SELAMAT DATANG DI CARI MAKAN ====== ");
+        System.out.println("=====     Layanan Pesan Online     ====== ");
         System.out.println(" ");
-        System.out.println("Login Sebagai :");
-        System.out.println("1. Admin");
-        System.out.println("2. Customer");
+        System.out.println("1. Login Sebagai Admin ");
+        System.out.println("2. Login Sebagai Costumer");
 
-        System.out.print("Masukkan Pilihan Anda: ");
-        int pilihan = scanner.nextInt();
+        Scanner input = new Scanner(System.in);
+        int pilihan;
+        System.out.println("Silahkan Masukkan Pilihan Anda : ");
+        pilihan = input.nextInt();
 
-        System.out.print("Username: ");
-        String username = scanner.next();
-
-        System.out.print("Password: ");
-        String password = scanner.next();
-
-        if (pilihan == 1) {
-            AdminLogin adminLogin = new AdminLogin();
-            if (adminLogin.validateCredentials(username, password)) {
-                System.out.println("Login sukses! Anda masuk sebagai admin.");
-            } else {
-                System.out.println("Login gagal! Username atau password salah.");
-            }
-        } else if (pilihan == 2) {
-            CustomerLogin customerLogin = new CustomerLogin();
-            if (customerLogin.validateCredentials(username, password)) {
-                System.out.println("Login sukses! Anda masuk sebagai customer.");
-            } else {
-                System.out.println("Login gagal! Username atau password salah.");
-            }
-        } else {
-            System.out.println("Pilihan tidak valid!");
+        switch (pilihan){
+            case 1:
+                AdminLogin Admin = new AdminLogin();
+                Admin.admin();
+                break;
+            case 2:
+                CostumerLogin Costumer = new CostumerLogin();
+                Costumer.costumer();
+                break;
+            default:
+                System.out.println("Silahkan masukkan pilihan yang tersedia");
         }
 
-        scanner.close();
     }
-}
+
+  }
