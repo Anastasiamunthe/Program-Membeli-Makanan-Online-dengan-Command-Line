@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Customer {
+    public void costumerMenu() {
+        System.out.println("Selamat datang, Customer");
+        System.out.println("Silahkan pilih menu : ");
+        System.out.println("1. Lihat Restoran");
+        System.out.println("2. Buat Pesanan");
+        System.out.println("3. Lihat Pesanan");
+        System.out.println("4. Kembali ke halaman Login");
+
+        Scanner pilihMenuAdmin = new Scanner(System.in);
+        System.out.println("Masukkan Pilihan Anda : ");
+        int pilihan = pilihMenuAdmin.nextInt();
+
+        switch (pilihan) {
+            case 1:
+                DaftarRestoran daftar = new DaftarRestoran();
+                daftar.Restoran();
+                break;
+            case 2:
+                DaftarRestoran.Restoran();
+                break;
+            case 3:
+                HapusRestoran hapus = new HapusRestoran();
+                hapus.Menghapus();
+                break;
+            case 4:
+                Main.main(new String[]{});
+                break;
+            default:
+                System.out.println("Silahkan masukkan pilihan yang tersedia");
+                break;
+        }
+    }
+}
