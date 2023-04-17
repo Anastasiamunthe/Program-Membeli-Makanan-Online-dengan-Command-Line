@@ -1,0 +1,6 @@
+public class HapusRestoran {
+    public void Menghapus(){
+        System.out.println("Pilih Restorang yang ingin anda hapus");
+
+    }
+}
