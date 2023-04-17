@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class RestoranCasino {
+    public void ProfilRestoranCasino (){
+        System.out.println("=====                 Restoran Casino                   ======");
+        System.out.println("=====      Alamat : Jln. Terusan, no. 28, Bali          ======");
+        System.out.println("=====                                                   ======");
+        System.out.println("         Daftar Menu : ");
+        System.out.println("1. Gurame Goreng  Rp. 18.000");
+        System.out.println("2. Gurame Bakar   Rp. 16.000");
+        System.out.println("3. Lele Goreng    Rp. 15.000");
+        System.out.println("4. Es Jeruk       Rp.  8.000");
+        System.out.println("5. Teh Susu       Rp.  8.000");
+        System.out.println("6. Es Teh Manis   Rp.  5.000");
+
+        System.out.println("=====                  Terima Kasih                     ======");
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Masukkan Pilihan Anda : ");
+        int menu = input.nextInt();
+        System.out.println("Jumlah pesanan : ");
+        int jumlah  = input.nextInt();
+
+        int harga = 0;
+        switch(menu){
+            case 1:
+                harga = 18000;
+                break;
+            case 2:
+                harga = 16000;
+                break;
+            case 3:
+                harga = 15000;
+                break;
+            case 4:
+                harga = 8000;
+                break;
+            case 5:
+                harga = 8000;
+                break;
+            case 6:
+                harga = 5000;
+                break;
+            default:
+                System.out.println("Menu tidak tersedia");
+                break;
+        }
+
+        int total = harga * jumlah;
+        System.out.println("Total harga : Rp. " + total);
+    }
+}
