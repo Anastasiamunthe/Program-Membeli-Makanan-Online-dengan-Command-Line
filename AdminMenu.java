@@ -1,35 +1,39 @@
 import java.util.Scanner;
-import DaftarRestoran;
-
-public class AdminMenu {
-    public static void main(String[] args) {
-
-
-        System.out.println("Selamat Datang di Menu Admin");
-        System.out.println("1. Daftar Restoran");
-        System.out.println("2. Tambahkan Restoran");
+public class Admin {
+    public static void adminMenu() {
+        System.out.println("Selamat datang, Admin!!!");
+        System.out.println("Silahkan pilih menu : ");
+        System.out.println("1. Lihat Restoran");
+        System.out.println("2. Tambah Restoran");
         System.out.println("3. Hapus Restoran");
-        System.out.println("4. Kembali");
+        System.out.println("4. Kembali ke halaman Login");
 
-        Scanner input = new Scanner(System.in);
+        Scanner pilihMenuAdmin = new Scanner(System.in);
         System.out.println("Masukkan Pilihan Anda : ");
-        int pilihan = input.nextInt();
+        int pilihan = pilihMenuAdmin.nextInt();
 
         switch (pilihan) {
             case 1:
-                DaftarRestoran();
+                DaftarRestoran daftar = new DaftarRestoran();
+                daftar.Restoran();
                 break;
             case 2:
-                System.out.println("Anda memilih Tambahkan Restoran");
+                TambahRestoran tambah = new TambahRestoran();
+                tambah.Tambahkan();
                 break;
             case 3:
-                System.out.println("Anda memilih Hapus Restoran");
+                HapusRestoran hapus = new HapusRestoran();
+                hapus.Menghapus();
                 break;
             case 4:
-                System.out.println("Anda memilih Kembali");
+                Main.main(new String[]{});
                 break;
             default:
-                System.out.println("Pilihan Yang Anda Masukkan Tidak Tersedia");
+                System.out.println("Silahkan masukkan pilihan yang tersedia");
+                break;
+
+
         }
+
     }
 }
